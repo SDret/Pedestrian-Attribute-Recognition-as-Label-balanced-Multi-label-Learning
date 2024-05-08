@@ -5,11 +5,17 @@ For a rigorous and unbiased comparison, our study adheres strictly to the benchm
 
 
 • Replacing the original `train.py' file with ours.
+
 • Replacing the original `batch_engine.py' file with ours.
+
 • Replacing the original `tools/function.py' file by ours.
+
 • Replacing the original `models/base_block.py' file with ours.
+
 • Replacing the original `configs/default.py' file with ours.
+
 • Replacing the original `configs/pedes_baseline' folder by ours.
+
 • Putting the `convnext.py' file under the path `models/backbone/' for testing on ConvNeXt.
 
 # Environment
