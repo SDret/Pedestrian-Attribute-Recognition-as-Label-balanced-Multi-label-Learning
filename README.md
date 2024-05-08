@@ -22,11 +22,14 @@ For a rigorous and unbiased comparison, our study adheres strictly to the benchm
 Pytorch == 1.10.1+cu102, numpy == 1.19.5 and python == 3.6.9 64-bit. All experiments in main text are conducted on a single NVIDIA Tesla V100 32G. 
 
 # Datasets
-Please download the datasets (PA100k, RAP, PETA and UPAR) from their official sources and structure them according to the specifications demanded in https://github.com/valencebond/Rethinking_of_PAR:
+Please download the datasets (PA100k, RAP, and PETA) from their official sources and structure them according to the specifications demanded in https://github.com/valencebond/Rethinking_of_PAR:
 
 • PETA@http://mmlab.ie.cuhk.edu.hk/projects/PETA.html
+
 • PA100k@https://github.com/xh-liu/HydraPlus-Net
+
 • RAPv1@http://www.rapdataset.com
+
 • UPAR@https://github.com/speckean/upar\_challenge/tree/main
 
 For PETAzs and RAPzs datasets specifically, this baseline work conveniently provides their re-organizing files under the 'data' directory.
