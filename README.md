@@ -30,12 +30,12 @@ Please download the datasets (PA100k, RAP and PETA) from their official sources 
 
 • RAPv1@http://www.rapdataset.com
 
-• UPAR@https://github.com/speckean/upar\_challenge/tree/main
+• UPAR@https://github.com/speckean/upar_challenge/tree/main
 
 For PETAzs and RAPzs datasets specifically, this baseline work conveniently provides their re-organizing files under the 'data' directory.
 
 # Training and Testing
-Please train an arbitary baseline model at first (we apply the baseline config at https://github.com/valencebond/Rethinking_of_PAR), importantly, without any weighted BCE loss, and save the converged model into the $model\_path$ variable defined under the $get\_reload\_weight$ function in the 'function.py' file. Next, simply run the following command,
+Please train an arbitary baseline model at first (we apply the baseline config at https://github.com/valencebond/Rethinking_of_PAR), importantly, without any weighted BCE loss, and save the converged model into the $model_path$ variable defined under the $get_reload_weight$ function in the 'function.py' file. Next, simply run the following command,
    
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py --cfg ./configs/pedes_baseline/$DATASET_CONFIG$
