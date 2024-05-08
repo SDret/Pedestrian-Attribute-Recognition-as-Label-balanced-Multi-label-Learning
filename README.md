@@ -16,7 +16,7 @@ For a rigorous and unbiased comparison, our study adheres strictly to the benchm
 
 • Replacing the original `configs/pedes_baseline' folder by ours.
 
-• Putting the `convnext.py' file under the path `models/backbone/' for testing on ConvNeXt.
+• Putting the 'convnext.py' file under the path `models/backbone/' for testing on ConvNeXt.
 
 # Environment
 Pytorch == 1.10.1+cu102, numpy == 1.19.5 and python == 3.6.9 64-bit. All experiments in main text are conducted on a single NVIDIA Tesla V100 32G. 
