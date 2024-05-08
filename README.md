@@ -1,22 +1,22 @@
 # Pedestrian-Attribute-Recognition-as-Label-balanced-Multi-label-Learning
-This is the official pytorch implementation of the ICML2024 main conference paper: `Pedestrian Attribute Recognition as Label-balanced Multi-label Learning'. By following steps, researchers can ensure a smooth reproduction of our experimental results.
+This is the official pytorch implementation of the ICML2024 main conference paper: 'Pedestrian Attribute Recognition as Label-balanced Multi-label Learning'. By following steps, researchers can ensure a smooth reproduction of our experimental results.
 
 For a rigorous and unbiased comparison, our study adheres strictly to the benchmarking guidelines outlined in https://github.com/valencebond/Rethinking_of_PAR, by adopting the publicly available code of this baseline work for dataset partitioning, data loader generation, backbone configuration and metric setup. In order to facilitate an easy implementation of our method, we recommend to review the public code repository at https://github.com/valencebond/Rethinking_of_PAR and implement our method directly onto this code by simply replacing serval .py files of training setting and configs:
 
 
-• Replacing the original `train.py' file with ours.
+• Replacing the original 'train.py' file with ours.
 
-• Replacing the original `batch_engine.py' file with ours.
+• Replacing the original 'batch_engine.py' file with ours.
 
-• Replacing the original `tools/function.py' file by ours.
+• Replacing the original 'tools/function.py' file by ours.
 
-• Replacing the original `models/base_block.py' file with ours.
+• Replacing the original 'models/base_block.py' file with ours.
 
-• Replacing the original `configs/default.py' file with ours.
+• Replacing the original 'configs/default.py' file with ours.
 
-• Replacing the original `configs/pedes_baseline' folder by ours.
+• Replacing the original 'configs/pedes_baseline' folder by ours.
 
-• Putting the 'convnext.py' file under the path `models/backbone/' for testing on ConvNeXt.
+• Putting the 'convnext.py' file under the path 'models/backbone/' for testing on ConvNeXt.
 
 # Environment
 Pytorch == 1.10.1+cu102, numpy == 1.19.5 and python == 3.6.9 64-bit. All experiments in main text are conducted on a single NVIDIA Tesla V100 32G. 
@@ -29,13 +29,13 @@ Please download the datasets (PA100k, RAP, PETA and UPAR) from their official so
 • RAPv1@http://www.rapdataset.com
 • UPAR@https://github.com/speckean/upar\_challenge/tree/main
 
-For PETAzs and RAPzs datasets specifically, this baseline work conveniently provides their re-organizing files under the `data' directory.
+For PETAzs and RAPzs datasets specifically, this baseline work conveniently provides their re-organizing files under the 'data' directory.
 
 # Training and Testing
-Please train an arbitary baseline model at first (we apply the baseline config at https://github.com/valencebond/Rethinking_of_PAR), importantly, without any weighted BCE loss, and save the converged model into the $model\_path$ variable defined under the $get\_reload\_weight$ function in the `function.py' file. Next, simply run the following command,
+Please train an arbitary baseline model at first (we apply the baseline config at https://github.com/valencebond/Rethinking_of_PAR), importantly, without any weighted BCE loss, and save the converged model into the $model\_path$ variable defined under the $get\_reload\_weight$ function in the 'function.py' file. Next, simply run the following command,
    
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py --cfg ./configs/pedes_baseline/$DATASET_CONFIG$
 ```
 
-where DATASET_CONFIG can be any config file within the `pedes_baseline' folder. Sequentially, all the training process of FRDL and GOAT would be automatically operated, along with corresponding benchmark results to be displayed. Config files named with `stage1' is applied for the feature extractor training in the Stage#1 of FRDL.
+where DATASET_CONFIG can be any config file within the 'pedes_baseline' folder. Sequentially, all the training process of FRDL and GOAT would be automatically operated, along with corresponding benchmark results to be displayed. Config files named with 'stage1' is applied for the feature extractor training in the Stage#1 of FRDL.
