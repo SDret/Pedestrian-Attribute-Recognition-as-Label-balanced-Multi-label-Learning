@@ -41,4 +41,4 @@ Please train an arbitary baseline model at first (we apply the baseline config a
 CUDA_VISIBLE_DEVICES=0 python train.py --cfg ./configs/pedes_baseline/DATASET_CONFIG
 ```
 
-where DATASET_CONFIG can be any config file within the 'pedes_baseline' folder. Sequentially, all the training process of FRDL and GOAT would be automatically operated, along with corresponding benchmark results to be displayed. Config files named with 'stage1' is applied for the feature extractor training in the Stage#1 of FRDL.
+where DATASET_CONFIG can be any config file within the 'pedes_baseline' folder. Sequentially, all the training process of FRDL and GOAT would be automatically operated, along with corresponding benchmark results to be displayed. Config files named with '_base' is applied for the feature extractor training in the Stage#1 of FRDL.
