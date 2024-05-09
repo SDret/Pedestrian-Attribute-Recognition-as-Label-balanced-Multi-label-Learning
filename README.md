@@ -1,5 +1,5 @@
 # Pedestrian-Attribute-Recognition-as-Label-balanced-Multi-label-Learning
-This is the official pytorch implementation of the ICML2024 main conference paper: 'Pedestrian Attribute Recognition as Label-balanced Multi-label Learning'. By following steps, researchers can ensure a smooth reproduction of our experimental results.
+This is the official pytorch implementation of the ICML2024 main conference paper: 'Pedestrian Attribute Recognition as Label-balanced Multi-label Learning'https://arxiv.org/abs/2405.04858. By following steps, researchers can ensure a smooth reproduction of our experimental results.
 
 For a rigorous and unbiased comparison, our study adheres strictly to the benchmarking guidelines outlined in https://github.com/valencebond/Rethinking_of_PAR, by adopting the publicly available code of this baseline work for dataset partitioning, data loader generation, backbone configuration and metric setup. In order to facilitate an easy implementation of our method, we recommend to review the public code repository at https://github.com/valencebond/Rethinking_of_PAR and implement our method directly onto this code by simply replacing serval .py files of training setting and configs:
 
