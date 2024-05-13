@@ -36,7 +36,7 @@ class Classifier(nn.Module):
         self.c = c_in
         self.attri_Q = attributes_Q(self.nattr, self.c)
 
-        self.separte = nn.Sequential(nn.Linear(c_in, nattr*c_in))
+        self.separte = nn.Sequential(nn.Linear(c_in, nattr*c_in), nn.BatchNorm1d(nattr*c_in))
         self.logits = nn.ModuleList([nn.Linear(c_in, 1) for i in range(nattr)])
 
         for p in self.separte.parameters():
