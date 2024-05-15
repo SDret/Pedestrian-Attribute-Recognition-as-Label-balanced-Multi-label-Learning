@@ -44,7 +44,7 @@ def batch_trainer(cfg, args, epoch, model, train_loader, criterion, optimizer, l
         imgs, gt_label = imgs.cuda(), gt_label.cuda()
 
         if epoch != 0:
-            if step%20==0:
+            if step%50==0:
                 model = get_reload_weight(model, cfg.BACKBONE.TYPE, cfg.DATASET.NAME, cfg.DATASET.LABEL)
         
         train_logits, train_logits_ft, gt_label, gt_label_ft = model(imgs, gt_label,'train', epoch)
