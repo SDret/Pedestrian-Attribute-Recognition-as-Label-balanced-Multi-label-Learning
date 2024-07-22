@@ -32,13 +32,15 @@ Please download the datasets (PA100k, RAP and PETA) from their official sources 
 
 • UPAR@https://github.com/speckean/upar_challenge/tree/main
 
-For PETAzs and RAPzs datasets specifically, this baseline work conveniently provides their re-organizing files under the 'data' directory.
+For PETAzs and RAPzs datasets specifically, this baseline work conveniently provides their re-organizing files under the 'data' directory. We also give the code to re-organize balanced testsets like that for ImangeNet-LT and CIFAR-LT in the folder `balanced_setting', you could just simply replace the corresponding codes with those in this folder to get the results.
 
 # Training and Testing
-Please train an arbitary baseline model at first (remove the FRDL and GOAT modules in our code to just train a baseline backbone), importantly, without any weighted BCE loss, and save the converged model into the 'model_path' variable defined under the 'get_reload_weight' function in the 'function.py' file. Next, simply run the following command,
+Please pre-train an arbitary baseline model at first (remove the FRDL and GOAT modules in our code to just train a baseline backbone), importantly, without any weighted BCE loss, and save the converged model into the 'model_path' variable defined under the 'get_reload_weight' function in the 'function.py' file. Please note that, you could use any pre-trained feature extractor of PAR in this step, not necessarily be the baseline model above for better results. Next, simply run the following command,
    
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py --cfg ./configs/pedes_baseline/DATASET_CONFIG
 ```
 
 where DATASET_CONFIG can be any config file within the 'pedes_baseline' folder. Sequentially, all the training process of FRDL and GOAT would be automatically operated, along with corresponding benchmark results to be displayed. Config files named with '_base' is applied for the feature extractor training in the Stage#1 of FRDL.
+
+
